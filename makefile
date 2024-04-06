@@ -1,13 +1,16 @@
 .PHONY: all clean
 
-all: main.o unicode.o
-	gcc unicode.o main.o -o main
+SRC = ustrlen.c ustrlenbytes.c ustrfill.c ustrfree.c
+OBJ = $(SRC:.c=.o)
+
+all: test.c $(OBJ)
+	gcc -o test test.c $(OBJ)
 
 clean:
-	rm main *.o
+	rm $(OBJ) test
 
-unicode.o: unicode.c
-	gcc -o unicode.o -c unicode.c
-
-main.o: main.c
-	gcc -o main.o -c main.c
+unicode.o: unicode.h $(SRC)
+	gcc -o ustrlen.o ustrlen.c -c
+	gcc -o ustrlenbytes.o ustrlenbytes.c -c
+	gcc -o ustrfill.o ustrfill.c -c
+	gcc -o ustrfree.o ustrfree.c -c

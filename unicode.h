@@ -7,18 +7,26 @@
 extern "C" {
 #endif
 
+/* Len of strings */
+typedef unsigned long long len_t;
 
+/* UTF-8 string */
+struct ustring {
+  char *bytes; /* UTF-8 bytes */
+  len_t len;   /* Length in bytes */
+};
 
-/* Unicode char */
-typedef struct {
-  char ch[4];
-} uchar;
+/* Copy CSTR to USTR */
+void ustrfill(struct ustring *ustr, char *cstr);
 
-/* Copy unicode char SRC to DEST */
-void uchcpy(uchar *dst, uchar *src);
+/* Free memory of USTR */
+void ustrfree(struct ustring *ustr);
 
+/* Len of USTR in symbols */
+len_t ustrlen(struct ustring *ustr);
 
-
+/* Len of USTR in bytes */
+len_t ustrlenbytes(struct ustring *ustr);
 
 #ifdef __cplusplus
 }

@@ -1,0 +1,5 @@
+#include "unicode.h"
+
+len_t ustrlenbytes(struct ustring *ustr) {
+  return ustr->len;
+}
