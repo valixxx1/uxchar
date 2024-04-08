@@ -28,6 +28,12 @@ len_t ustrlen(struct ustring *ustr);
 /* Len of USTR in bytes */
 len_t ustrlenbytes(struct ustring *ustr);
 
+/* Bytes to ustring */
+struct ustring bytestoustr(char *bytes);
+
+/* Ustring to bytes */
+char* ustrtobytes(struct ustring *ustr);
+
 #ifdef __cplusplus
 }
 #endif

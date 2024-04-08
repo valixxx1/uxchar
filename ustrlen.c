@@ -1,4 +1,4 @@
-#include "unicode.h"
+#include "uxchar.h"
 
 len_t ustrlen(struct ustring *ustr) {
   len_t i = 0, count = 0;

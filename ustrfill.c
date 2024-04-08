@@ -1,4 +1,4 @@
-#include "unicode.h"
+#include "uxchar.h"
 #include <stdlib.h>
 #include <string.h>
 
