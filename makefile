@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-SRC = ustrlen.c ustrlenbytes.c ustrfill.c ustrfree.c ustrtobytes.c bytestoustr.c
+SRC = ustrlen.c ustrlenbytes.c ustrfill.c ustrfree.c ustrtobytes.c bytestoustr.c unew.c
 OBJ = $(SRC:.c=.o)
 
 all: test.c $(OBJ)
@@ -16,3 +16,4 @@ uxchar.o: uxchar.h $(SRC)
 	gcc -o ustrfree.o ustrfree.c -c
 	gcc -o ustrtobytes.o ustrtobytes.c -c
 	gcc -o bytestoustr.o bytestoustr.c -c
+	gcc -o unew.o unew.c -c
