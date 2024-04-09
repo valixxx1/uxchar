@@ -1,4 +1,4 @@
-#include "uxchar.h"
+#include "../include/uxchar.h"
 #include <string.h>
 
 struct ustring bytestoustr(char *bytes) {

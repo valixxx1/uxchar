@@ -1,4 +1,4 @@
-#include "uxchar.h"
+#include "../include/uxchar.h"
 #include <stdlib.h>
 #include <string.h>
 
