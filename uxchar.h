@@ -13,4 +13,5 @@ class uxstring {
 public:
   uxstring(std::string);
   size_t length();
+  std::string operator[](size_t index);
 };
