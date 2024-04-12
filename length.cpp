@@ -7,7 +7,7 @@
 
 #include "uxchar.h"
 
-size_t uxstring::length()
+size_t uxstring::length() const
 {
   size_t count = 0;
 

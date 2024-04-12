@@ -12,7 +12,8 @@ class uxstring {
 
 public:
   uxstring(std::string);
-  size_t length();
+  size_t length() const;
   std::string operator[](size_t index);
   size_t find(uxstring sub);
+  bool operator==(const uxstring & other);
 };
