@@ -12,3 +12,13 @@ uxstring::uxstring(const char *str)
 {
   this->str = std::string(str);
 }
+
+uxstring::uxstring()
+{
+  this->str = std::string();
+}
+
+uxstring::uxstring(const uxstring & other)
+{
+  this->str = std::string(other);
+}

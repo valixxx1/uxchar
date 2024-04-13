@@ -8,10 +8,14 @@ class uxstring {
   std::string str;
 
 public:
+  uxstring();
   uxstring(std::string);
   uxstring(const char*);
+  uxstring(const uxstring&);
+
   size_t length() const;
   size_t find(uxstring sub) const;
+
   std::string operator[](size_t index) const;
   bool operator==(const uxstring & other) const;
   bool operator!=(const uxstring & other) const;
