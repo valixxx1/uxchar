@@ -1,7 +1,4 @@
-/* Это реализация конструктора строки uxstring
- *
- * Made by valixxx1 in 2024
- */
+// Copyright (C) 2024 by valixxx1
 
 #include "uxchar.h"
 #include <string>

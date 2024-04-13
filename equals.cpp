@@ -1,11 +1,8 @@
-/* Это реализация оператора == для строк uxstring
- *
- * Made by valixxx1 in 2024
- */
+// Copyright (C) 2024 by valixxx1
 
 #include "uxchar.h"
 
-bool uxstring::operator==(const uxstring & other)
+bool uxstring::operator==(const uxstring & other) const
 {
   if (this->length() != other.length()) {
     return 0;
@@ -20,7 +17,7 @@ bool uxstring::operator==(const uxstring & other)
   return 1;
 }
 
-bool uxstring::operator!=(const uxstring & other)
+bool uxstring::operator!=(const uxstring & other) const
 {
   if (this->length() != other.length()) {
     return 1;

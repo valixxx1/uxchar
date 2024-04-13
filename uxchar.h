@@ -14,8 +14,9 @@ public:
   uxstring(std::string);
   uxstring(const char*);
   size_t length() const;
-  size_t find(uxstring sub);
-  std::string operator[](size_t index);
-  bool operator==(const uxstring & other);
-  bool operator!=(const uxstring & other);
+  size_t find(uxstring sub) const;
+  std::string operator[](size_t index) const;
+  bool operator==(const uxstring & other) const;
+  bool operator!=(const uxstring & other) const;
+  operator const char*() const;
 };
