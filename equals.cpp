@@ -19,3 +19,18 @@ bool uxstring::operator==(const uxstring & other)
 
   return 1;
 }
+
+bool uxstring::operator!=(const uxstring & other)
+{
+  if (this->length() != other.length()) {
+    return 1;
+  }
+
+  for (size_t i = 0; i < str.length(); i++) {
+    if (str[i] != other.str[i]) {
+      return 1;
+    }
+  }
+
+  return 0;
+}

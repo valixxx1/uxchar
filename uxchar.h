@@ -17,4 +17,5 @@ public:
   size_t find(uxstring sub);
   std::string operator[](size_t index);
   bool operator==(const uxstring & other);
+  bool operator!=(const uxstring & other);
 };
