@@ -1,7 +1,4 @@
-/* Это заголовочный файл библиотеки uxchar для работы с UTF-8 строками
- *
- * Made by valixxx1 in 2024
- */
+// Copyright (C) 2024 by valixxx1
 
 #pragma once
 

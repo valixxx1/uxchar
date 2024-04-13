@@ -8,15 +8,15 @@ all: $(OBJ)
 clean:
 	rm $(OBJ) uxchar.a
 
-uxstring.o: uxstring.cpp
+uxstring.o:          src/uxstring.cpp
 	g++ -c -o $@ $<
-length.o: length.cpp
+length.o:            src/length.cpp
 	g++ -c -o $@ $<
-indexing.o: indexing.cpp
+indexing.o:          src/indexing.cpp
 	g++ -c -o $@ $<
-find.o: find.cpp
+find.o:              src/find.cpp
 	g++ -c -o $@ $<
-to_const_char_ptr.o: to_const_char_ptr.cpp
+to_const_char_ptr.o: src/to_const_char_ptr.cpp
 	g++ -c -o $@ $<
-equals.o: equals.cpp
+equals.o:            src/equals.cpp
 	g++ -c -o $@ $<

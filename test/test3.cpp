@@ -1,4 +1,4 @@
-#include "uxchar.h"
+#include "../uxchar.h"
 #include <cassert>
 #include <iostream>
 

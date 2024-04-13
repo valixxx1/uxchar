@@ -1,5 +1,5 @@
 #include <iostream>
-#include "uxchar.h"
+#include "../uxchar.h"
 
 int main()
 {
