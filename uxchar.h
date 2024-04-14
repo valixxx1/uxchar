@@ -4,6 +4,18 @@
 
 #include <string>
 
+class uxchar {
+  char ch[4];
+
+public:
+  uxchar();
+  uxchar(std::string);
+  uxchar(const char*);
+  uxchar(const uxchar&);
+
+  bool operator==(const uxchar & other) const;
+};
+
 class uxstring {
   std::string str;
 

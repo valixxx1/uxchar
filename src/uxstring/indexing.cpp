@@ -1,6 +1,6 @@
 // Copyright (C) 2024 by valixxx1
 
-#include "../uxchar.h"
+#include "../../uxchar.h"
 
 std::string uxstring::operator[](size_t index) const
 {
