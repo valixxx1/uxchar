@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-OBJ = uxstring.o length.o indexing.o find.o to_const_char_ptr.o sequals.o clear.o empty.o uxchar.o cequals.o
+OBJ = uxstring.o length.o indexing.o find.o to_const_char_ptr.o sequals.o clear.o empty.o uxchar.o cequals.o size.o
 
 all: $(OBJ)
 	ar rcs uxchar.a $(OBJ)
@@ -27,4 +27,6 @@ empty.o:             src/uxstring/empty.cpp
 uxchar.o:            src/uxchar/uxchar.cpp
 	g++ -c -o $@ $<
 cequals.o:           src/uxchar/equals.cpp
+	g++ -c -o $@ $<
+size.o:              src/uxchar/size.cpp
 	g++ -c -o $@ $<

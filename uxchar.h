@@ -15,6 +15,8 @@ public:
 
   bool operator==(const uxchar & other) const;
   bool operator!=(const uxchar & other) const;
+
+  size_t size() const;
 };
 
 class uxstring {
