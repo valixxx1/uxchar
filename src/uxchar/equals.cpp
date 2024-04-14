@@ -11,3 +11,13 @@ bool uxchar::operator==(const uxchar & other) const
   }
   return 1;
 }
+
+bool uxchar::operator!=(const uxchar & other) const
+{
+  for (int i = 0; i < 4; i++) {
+    if (ch[i] != other.ch[i]) {
+      return 1;
+    }
+  }
+  return 0;
+}

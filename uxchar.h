@@ -14,6 +14,7 @@ public:
   uxchar(const uxchar&);
 
   bool operator==(const uxchar & other) const;
+  bool operator!=(const uxchar & other) const;
 };
 
 class uxstring {
