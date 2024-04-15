@@ -1,21 +1,15 @@
 // Copyright (C) 2024 by valixxx1
 
 #include "../../uxchar.h"
+#include <vector>
 
 size_t uxstring::find(uxstring sub) const
 {
-  size_t res = str.find(sub.str);
-  size_t count = 0;
-
-  if (res == std::string::npos) {
-    return -1;
-  }
-
-  for (size_t i = 0; i < res; i++) {
-    if ((str[i] & 0xC0) != 0x80) {
-      count++;
+  auto res = str.cbegin();
+  for (; res + sub.length() != str.cend(); res++) {
+    if (sub.str == std::vector<uxchar>(res, res + sub.length())) {
+      return res - str.cbegin();
     }
   }
-
-  return count;
+  return -1;
 }

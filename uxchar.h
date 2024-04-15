@@ -3,8 +3,11 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 class uxchar {
+  friend class uxstring;
+
   char ch[4];
 
 public:
@@ -20,7 +23,8 @@ public:
 };
 
 class uxstring {
-  std::string str;
+  std::vector<uxchar> str;
+  std::string magic;
 
 public:
   uxstring();
@@ -33,8 +37,8 @@ public:
   void clear();
   bool empty() const;
 
-  std::string operator[](size_t index) const;
+  uxchar operator[](size_t index) const;
   bool operator==(const uxstring & other) const;
   bool operator!=(const uxstring & other) const;
-  operator const char*() const;
+  operator const char*();
 };
